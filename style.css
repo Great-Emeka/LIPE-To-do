@@ -4,9 +4,9 @@
     box-sizing: border-box;
   }
 
-  .wrapper{
+  /* .wrapper{
       font-size: 1.5rem;
-  }
+  } */
 
   body{
     font-family: "Roboto", sans-serif;
@@ -20,5 +20,23 @@ header,form{
     min-height: 20hv;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    border: none;
+    background: white;
+}
+
+form button{
+    color: #d88771;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    background: #330033;
+    color: white;
 }
