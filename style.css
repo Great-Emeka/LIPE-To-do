@@ -27,7 +27,7 @@ form input, form button{
 }
 
 form input{
-    min-width: 60vh;
+    min-width: 50vh;
 }
 
 form button{
@@ -48,7 +48,7 @@ form button:hover{
 }
 
 .todo-list{
-    min-width: 50vh;
+    min-width: 40vh;
     list-style: none;
 }
 
@@ -87,4 +87,9 @@ form button:hover{
 
 .todo-item{
     padding: 0rem 0.5rem;
+}
+
+/*To disable the icons from been clickable, leaving only the btn*/
+.fa-check,.fa-trash{
+    pointer-events: none;
 }

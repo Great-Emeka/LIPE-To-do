@@ -1,15 +1,18 @@
-//All my selectors goes here
+//All my selectors goes here:
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 
-//Event Listeners
+//Event Listeners:
 todoButton.addEventListener("click", addTodo);
+todoList.addEventListener('click', deleteCheck);
 
 
 //Functions
+
+//A function to Add a new Todo List
 function addTodo(event) {
-    //to prevent the form from submitting we do
+    //To prevent the form from submitting we do
     event.preventDefault();
     
     //Todo Div
@@ -38,4 +41,14 @@ function addTodo(event) {
 
     //Clear Todo Input value
     todoInput.value = "";
+};
+
+//A function to Delete an added Todo List
+function deleteCheck(e){
+    const item = e.target;
+    //Delete TODO
+    if (item.classList[0] === "trash-btn"){
+        const todo = item.parentElement;
+        todo.remove();
+    }
 }
