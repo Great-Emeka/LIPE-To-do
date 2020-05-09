@@ -7,8 +7,7 @@ const todoList = document.querySelector(".todo-list");
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener('click', deleteCheck);
 
-
-//Functions
+//FUNCTIONS:
 
 //A function to Add a new Todo List
 function addTodo(event) {
@@ -51,4 +50,10 @@ function deleteCheck(e){
         const todo = item.parentElement;
         todo.remove();
     }
-}
+
+    //CHECK MARK BTN
+    if (item.classList[0] === "complete-btn"){
+        const todo = item.parentElement;
+        todo.classList.toggle('completed');
+    }
+};

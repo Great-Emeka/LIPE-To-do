@@ -60,6 +60,7 @@ form button:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5 ease;
 }
 
 .todo li{
@@ -92,4 +93,10 @@ form button:hover{
 /*To disable the icons from been clickable, leaving only the btn*/
 .fa-check,.fa-trash{
     pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.8;
+    color: #0066BB;
 }
