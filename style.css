@@ -95,8 +95,14 @@ form button:hover{
     pointer-events: none;
 }
 
-.completed{
+.completed {
     text-decoration: line-through;
     opacity: 0.8;
     color: #0066BB;
+    font-weight: bolder;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0.2;
 }

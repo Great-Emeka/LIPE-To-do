@@ -48,8 +48,13 @@ function deleteCheck(e){
     //Delete TODO
     if (item.classList[0] === "trash-btn"){
         const todo = item.parentElement;
-        todo.remove();
-    }
+        todo.remove();  //Remove this if you want to try the animation again
+        //Animation
+    //    todo.classList.add("fall");
+    //    todo.addEventListener('transitionend',function(){
+    //         todo.remove();
+    //    })
+    };
 
     //CHECK MARK BTN
     if (item.classList[0] === "complete-btn"){
@@ -57,3 +62,5 @@ function deleteCheck(e){
         todo.classList.toggle('completed');
     }
 };
+
+
