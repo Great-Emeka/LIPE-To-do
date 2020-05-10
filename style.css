@@ -27,7 +27,7 @@ form input, form button{
 }
 
 form input{
-    min-width: 60vh;
+    min-width: 50vh;
 }
 
 form button{
@@ -48,7 +48,7 @@ form button:hover{
 }
 
 .todo-list{
-    min-width: 50vh;
+    min-width: 40vh;
     list-style: none;
 }
 
@@ -60,6 +60,7 @@ form button:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5 ease;
 }
 
 .todo li{
@@ -88,3 +89,61 @@ form button:hover{
 .todo-item{
     padding: 0rem 0.5rem;
 }
+
+/*To disable the icons from been clickable, leaving only the btn*/
+.fa-check,.fa-trash{
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.8;
+    color: #0066BB;
+    font-weight: bolder;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0.2;
+}
+
+select {
+    /* first we remove default features */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    /* adding new styles */
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.8rem;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    font-weight: 500;
+    padding: 1rem; 
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: #ff6f47;
+}
+
+
+
+
