@@ -25,6 +25,7 @@ function addTodo(event) {
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
 
+
     //Check mark button
     const completedButton = document.createElement('button');
     completedButton.innerHTML = '<i class="fa fa-check"></i>';
@@ -50,12 +51,7 @@ function deleteCheck(e){
     //Delete TODO
     if (item.classList[0] === "trash-btn"){
         const todo = item.parentElement;
-        todo.remove();  //Remove this if you want to try the animation again
-        //Animation
-    //    todo.classList.add("fall");
-    //    todo.addEventListener('transitionend',function(){
-    //         todo.remove();
-    //    })
+        todo.remove();
     };
 
     //CHECK MARK BTN
@@ -89,6 +85,6 @@ function filterTodo(e){
                 break;
         }
     });
-}
+};
 
 
