@@ -3,11 +3,20 @@ const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
+const dateElement = document.getElementById('date');
 
 //Event Listeners:
 todoButton.addEventListener("click", addTodo);
+// todoList.addEventListener('click', editList);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterTodo);
+
+
+//SHOW DATE
+let options = {weekday: "long", month: "short", day:"numeric"};
+let today = new Date();
+dateElement.innerHTML = today.toLocaleDateString("en-Us", options);
+
 
 //FUNCTIONS:
 
@@ -32,13 +41,26 @@ function addTodo(event) {
     completedButton.classList.add("complete-btn");
     todoDiv.appendChild(completedButton);
 
+    //Edit button
+    const editButton = document.createElement('button');
+    editButton.innerHTML = '<i class="fa fa-edit" title="Edit"></i>'
+    editButton.classList.add('edit-btn');
+    todoDiv.appendChild(editButton);
+
     //Check trash button
     const trashButton = document.createElement('button');
     trashButton.innerHTML = '<i class="fa fa-trash"></i>';
     trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
 
-    //Appending to List
+    //Validating input
+    let inputValue = todoInput.value;
+	if (inputValue === '') {
+        alert('Please enter a todo!');
+        return;
+    } 
+    
+    //But if There is a value in the input,
     todoList.appendChild(todoDiv);
 
     //Clear Todo Input value
