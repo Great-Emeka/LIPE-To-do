@@ -13,10 +13,32 @@
 }
 
 header,form{
-    min-height: 20hv;
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#date{
+    position: absolute;
+    left: 29vw;
+    bottom: -2vh;
+    border: 1px solid yellow;
+    padding: 1vh 5vw;
+    align-items: center;
+    font-size: 5vw;
+}
+
+.text-white{
+    font-size: 8vw;
+    font-weight: 600;
 }
 
 form input, form button{
@@ -27,14 +49,15 @@ form input, form button{
 }
 
 form input{
-    min-width: 50vh;
+    min-width: 30vw;
+    margin-left: 5vw;
 }
 
 form button{
     color: #d88771;
     background: white;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 form button:hover{
     background: #330033;
@@ -129,10 +152,15 @@ select {
 }
 
 .select {
-    margin: 1rem;
+    margin: 0.5rem;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
+
+select.filter-todo{
+    width: 1vw;
+}
+
 
 .select::after {
     content: "\25BC";
@@ -141,7 +169,7 @@ select {
     top: 0;
     right: 0;
     font-weight: 500;
-    padding: 1rem; 
+    padding: 0.8rem; 
     pointer-events: none;
     transition: all 0.3s ease;
 }
@@ -152,13 +180,4 @@ select {
 }
 
 
-#date {
-    position: absolute;
-    top: 20;
-    left: 10;
-    margin: 50px;
-    align-items: center;
-    justify-content: center;
-
-}
 
